@@ -1,0 +1,1 @@
+file_location='E:\1.Python_f\listen-sentence\sentence.txt'

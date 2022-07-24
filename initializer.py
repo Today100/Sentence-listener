@@ -7,7 +7,8 @@ def appinitializer():
     # try:
         # print("Yes")
     with open(os.getcwd()+"\\setting.py", "w") as f:
-        f.write(f"""file_location='{direc}\\sentence.txt'""")
+        dir = os.getcwd().replace("\\", "\\\\")
+        f.write(f"""file_location='{dir}\\\\sentence.txt'""")
     # except:
     #     print("Error")
     #     pass

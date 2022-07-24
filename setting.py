@@ -1,1 +1,1 @@
-file_location='E:\1.Python_f\listen-sentence\sentence.txt'
+file_location='E:\\1.Python_f\\listen-sentence\sentence.txt'

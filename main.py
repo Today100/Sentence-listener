@@ -10,20 +10,22 @@ from tkinter import *
 from pygame import mixer  # Load the popular external library
 
 
-import setting
-import importlib
-
-
 
 mixer.init()
 
 times = 0
 score = 0
-
+setting = {}
+def set_setting():
+    with open(os.getcwd()+"//setting.py", "r") as f:
+        num = str(f.readlines()).replace("]", "").replace("[", "").replace("\"", "").replace("'", "").replace("\\\\\\\\", "/")
+        num = num.split("=")
+        setting[num[0]] = num[1]
+        f.close()
 def open_all():
-    importlib.reload(setting)
+    set_setting()
     global sentences
-    file = open(setting.file_location)
+    file = open(setting["file_location"])
     sentences = list(file.readlines())
 
 def get_random_sentence():
